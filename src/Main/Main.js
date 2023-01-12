@@ -21,8 +21,11 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <h2>Main</h2>
+        <h1 className="app-name">Critter Companion</h1>
         <Form />
+        <div className="home-gif-container">
+          <img className="home-gif" src="https://media.tenor.com/gxtnvT8-FnUAAAAi/acnh.gif" />
+        </div>
         <Results />
       </div>
     )
