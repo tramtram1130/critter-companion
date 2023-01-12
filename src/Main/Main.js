@@ -20,7 +20,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <h2>Main</h2>
         <Form />
         <Results />

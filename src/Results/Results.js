@@ -4,7 +4,7 @@ import Card from '../Card/Card'
 
 const Results = () => {
   return (
-    <div>
+    <div className="results">
       <h2>Results</h2>
       <Card />
     </div>
