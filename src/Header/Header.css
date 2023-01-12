@@ -1,3 +1,19 @@
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border: 2px solid blue;
 }
+
+.logo {
+  width: 5vw;
+  padding: 1vw;
+}
+
+.link-container {
+  font-size: 1.5rem;
+  padding: 1vw;
+  align-self: center;
+  font-family: FinkHeavy;
+}
+
