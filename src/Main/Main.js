@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './Main.css'
 import Form from '../Form/Form'
+import Results from '../Results/Results'
 
 class Main extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class Main extends Component {
       <div>
         <h2>Main</h2>
         <Form />
+        <Results />
       </div>
     )
   }
