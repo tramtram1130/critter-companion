@@ -2,11 +2,11 @@ import React from 'react'
 import './Results.css'
 import Card from '../Card/Card'
 
-const Results = () => {
+const Results = (props) => {
+  const allBugs = props.bugs.map(bug => <Card key={bug.id} imgUrl={bug.image_uri} />)
   return (
     <div className="results">
-      <h2>Results</h2>
-      <Card />
+      {allBugs}
     </div>
   )
 }

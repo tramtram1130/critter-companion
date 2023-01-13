@@ -1,0 +1,10 @@
+.card>img {
+  width: 8vw;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  background-color: #E4D8AC;
+}
