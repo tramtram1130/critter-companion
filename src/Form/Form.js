@@ -5,14 +5,27 @@ class Form extends Component {
   constructor() {
     super()
     this.state = {
-
+      month: "",
+      hour: "",
+      hemisphere: ""
     }
   }
+
+  handleChange = (event) => {
+    const { name, value } = event.target
+    this.setState({ [name]: value })
+    this.props.filterCritters(this.state.month, this.state.hour, this.state.hemisphere)
+  }
+
+  clearInputs = () => {
+    this.setState({ month: "", hour: "", hemisphere: "" })
+  }
+
   render() {
     return (
       <div className="form">
         <form className="form-container">
-          <select id="month" name="month">
+          <select id="month" name="month" value={this.state.month} onChange={this.handleChange}>
             <option value="">Month</option>
             <option value="1">January</option>
             <option value="2">February</option>
@@ -27,7 +40,7 @@ class Form extends Component {
             <option value="11">November</option>
             <option value="12">December</option>
           </select>
-          <select id="hour" name="hour">
+          <select id="hour" name="hour" value={this.state.hour} onChange={this.handleChange}>
             <option value="">Time of the Day</option>
             <option value="0">12AM</option>
             <option value="1">1AM</option>
@@ -54,7 +67,7 @@ class Form extends Component {
             <option value="22">10PM</option>
             <option value="23">11PM</option>
           </select>
-          <select id="hemisphere" name="hemisphere">
+          <select id="hemisphere" name="hemisphere" value={this.state.hemisphere} onChange={this.handleChange}>
             <option value="">Hemisphere</option>
             <option value="northern">Northern</option>
             <option value="southern">Southern</option>
