@@ -1,9 +1,3 @@
-@font-face {
-  font-family: FinkHeavy;
-  src: local("FinkHeavy"),
-    url("../assets/fonts/FinkHeavy.ttf") format('truetype')
-}
-
 .main {
   border: 2px solid black;
   display: flex;
