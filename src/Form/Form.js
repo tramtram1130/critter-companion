@@ -16,7 +16,7 @@ function Form({ filterCritters }) {
   const handleSubmit = event => {
     event.preventDefault()
     filterCritters(month, hour, hemisphere)
-    clearInputs()
+    // clearInputs()
   }
 
   return (

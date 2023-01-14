@@ -2,8 +2,7 @@ import React from 'react'
 import './Card.css'
 import MicroModal from 'react-micro-modal'
 
-const Card = ({ imgUrl }) => {
-  console.log(imgUrl)
+const Card = ({ name, imgUrl, price, bio }) => {
   return (
     <MicroModal
       trigger={(open) => (
@@ -14,7 +13,8 @@ const Card = ({ imgUrl }) => {
     >
       {(close) => (
         <div className='modal'>
-          <h2>Modal</h2>
+          <h2>{name}</h2>
+          <p>{bio}</p>
           <button className='close-modal-button' onClick={close}>
             Close!
           </button>
