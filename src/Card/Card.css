@@ -8,3 +8,32 @@
   border: 1px solid white;
   background-color: #E4D8AC;
 }
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.critter-name {
+  font-family: finkHeavy;
+  text-align: center;
+}
+
+.critter-portrait {
+  margin: -3rem;
+  width: 25vw;
+}
+
+.critter-bio {
+  font-family: PoppinsRegular;
+}
+
+.bottom-row {
+  width: 100%;
+  font-family: PoppinsRegular;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
