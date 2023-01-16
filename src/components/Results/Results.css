@@ -1,5 +1,7 @@
 .results {
+  position: relative;
+  top: 3rem;
   display: grid;
-  grid-template-columns: repeat(6, 2fr);
+  grid-template-columns: repeat(7, 2fr);
   width: 80%;
 }
