@@ -10,6 +10,7 @@ function Main() {
 
   const [bugs, setBugs] = useState([])
   const [filteredCritters, setFilteredCritters] = useState([])
+  const [collection, setCollection] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
 
@@ -47,16 +48,25 @@ function Main() {
     return
   }
 
+  const addToCollection = (bugId) => {
+    const bugToAdd = bugs.find(bug => bugId === bug.id)
+    if (!collection.includes(bugToAdd)) {
+      setCollection([...collection, bugToAdd])
+    }
+  }
 
   return (
     <main className="main">
       <h1 className="app-name">Critter Companion</h1>
-      <Form filterCritters={filterCritters} />
       <Route exact path="/"
         render={() => {
           return (
-            <div className="home-gif-container">
-              {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
+            <div className="home-container">
+              <Form filterCritters={filterCritters} />
+              <div className="home-gif-container">
+                {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
+              </div>
+              {!isLoading && <Results bugs={filteredCritters} addToCollection={addToCollection} />}
             </div>
           )
         }}
@@ -64,24 +74,12 @@ function Main() {
       <Route exact path="/collection"
         render={() => {
           return (
-            <Collection />
+            <Collection collection={collection} />
           )
         }}
       />
-      {!isLoading && <Results bugs={filteredCritters} />}
-      {/* <Route exact path="/:id"
-          render={({ match }) => {
-            console.log('match', match.params)
-            const bugToRender = bugs.find((bug) => bug.id == match.params.id)
-            console.log('bug to render', bugToRender)
-            return (
-              <Card id={bugToRender.id}></Card>
-            )
-          }}
-        /> */}
     </main>
   )
-
 }
 
 export default Main

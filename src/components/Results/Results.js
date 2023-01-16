@@ -13,6 +13,7 @@ const Results = (props) => {
         fileName={bug['file-name']}
         price={bug.price}
         bio={bug['museum-phrase']}
+        addToCollection={props.addToCollection}
       />
     )
   })
