@@ -9,7 +9,9 @@
 .app-name {
   font-family: FinkHeavy;
   font-size: 4rem;
+  color: #ffffff;
   text-align: center;
+  text-shadow: .2rem .2rem .2rem #000000;
 }
 
 .home-gif-container {
