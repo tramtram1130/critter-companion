@@ -1,6 +1,6 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Form.css'
-import ribbon from '../assets/images/ribbon-end-yellow.svg'
+import ribbon from '../../assets/images/ribbon-end-yellow.svg'
 
 function Form({ filterCritters }) {
 
@@ -25,8 +25,8 @@ function Form({ filterCritters }) {
     <div className="form-page">
       <div className="form-styling">
         <img className="left-ribbon" src={ribbon} alt="ribbon" />
-        <div className="form">
-          <form className="form-container">
+        <div className="form-container">
+          <form className="selection-container">
             <select id="month" name="month" value={month} onChange={(event) => setMonth(event.target.value)}>
               <option value="">Month</option>
               <option value="1">January</option>
