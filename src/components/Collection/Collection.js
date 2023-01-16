@@ -1,10 +1,12 @@
 import React from 'react'
 import './Collection.css'
+import Results from '../Results/Results'
 
-const Collection = () => {
+const Collection = ({ collection }) => {
   return (
     <div>
-     <h2>My Collection</h2>
+      <h3>My Collection</h3>
+      <Results bugs={collection} />
     </div>
   )
 }
