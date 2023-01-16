@@ -2,11 +2,30 @@
   width: 8vw;
 }
 
+.card>img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
 .card {
   display: flex;
   justify-content: center;
-  border: 1px solid white;
+  border: .2rem solid white;
+  border-radius: .2rem;
   background-color: #E4D8AC;
+  margin: .5rem;
+  box-shadow: .2rem .3rem .3rem #3d3d3d;
 }
 
 .modal {
@@ -23,6 +42,8 @@
 .critter-portrait {
   width: 22vh;
 }
+
+
 
 .critter-bio {
   font-family: PoppinsRegular;
