@@ -45,5 +45,5 @@ Card.propTypes = {
   fileName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   bio: PropTypes.string.isRequired,
-  addToCollection: PropTypes.func.isRequired,
+  addToCollection: PropTypes.func,
 }

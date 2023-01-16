@@ -29,5 +29,5 @@ export default Results
 
 Results.propTypes = {
   bugs: PropTypes.array.isRequired,
-  addToCollection: PropTypes.func.isRequired,
+  addToCollection: PropTypes.func,
 }
