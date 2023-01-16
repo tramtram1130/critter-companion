@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Main.css'
 import Form from '../Form/Form'
 import Results from '../Results/Results'
+import Card from '../Card/Card'
 import isabella from '../assets/images/isabella.gif'
 import { Route } from 'react-router-dom'
 
@@ -48,14 +49,30 @@ function Main() {
 
 
   return (
-    <div className="main">
+    <main className="main">
       <h1 className="app-name">Critter Companion</h1>
       <Form filterCritters={filterCritters} />
-      <div className="home-gif-container">
-        {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
-      </div>
+      <Route exact path="/"
+        render={() => {
+          return (
+            <div className="home-gif-container">
+              {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
+            </div>
+          )
+        }}
+      />
       {!isLoading && <Results bugs={filteredCritters} />}
-    </div>
+      <Route exact path="/:id"
+          render={({ match }) => {
+            console.log('match', match.params)
+            const bugToRender = bugs.find((bug) => bug.id == match.params.id)
+            console.log('bug to render', bugToRender)
+            return (
+              <Card id={bugToRender.id}></Card>
+            )
+          }}
+        />
+    </main>
   )
 
 }
