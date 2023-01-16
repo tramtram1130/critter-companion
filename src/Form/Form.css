@@ -26,6 +26,24 @@
   z-index: auto;
 }
 
+.error-msg-container {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/images/chat-bubble.png');
+  background-size: 28vw;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.error-msg-text {
+  font-family: PoppinsSemiBold;
+  font-size: 1.35vw;
+  position: relative;
+  top: 2rem;
+}
+
 select, input, button {
   padding: 5px;
   margin: 10px;
