@@ -21,8 +21,11 @@
 .card {
   display: flex;
   justify-content: center;
-  border: 1px solid white;
+  border: .2rem solid white;
+  border-radius: .2rem;
   background-color: #E4D8AC;
+  margin: .5rem;
+  box-shadow: .2rem .3rem .3rem #3d3d3d;
 }
 
 .modal {

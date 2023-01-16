@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Main.css'
 import Form from '../Form/Form'
 import Results from '../Results/Results'
+import isabella from '../assets/images/isabella.gif'
 
 function Main() {
 
@@ -50,7 +51,7 @@ function Main() {
       <h1 className="app-name">Critter Companion</h1>
       <Form filterCritters={filterCritters} />
       <div className="home-gif-container">
-        <img className="home-gif" alt="Dog Villager dancing" src="https://media.tenor.com/gxtnvT8-FnUAAAAi/acnh.gif" />
+        {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
       </div>
       {!isLoading && <Results bugs={filteredCritters} />}
     </div>
