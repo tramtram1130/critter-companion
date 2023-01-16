@@ -56,6 +56,10 @@ function Main() {
     }
   }
 
+  const clearSearch = () => {
+    setFilteredCritters([])
+  }
+
   return (
     <main className="main">
       <h1 className="app-name">Critter Companion</h1>
@@ -64,7 +68,7 @@ function Main() {
           render={() => {
             return (
               <div className="home-container">
-                <Form filterCritters={filterCritters} />
+                <Form filterCritters={filterCritters} clearSearch={clearSearch} />
                 <div className="home-gif-container">
                   {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
                 </div>
