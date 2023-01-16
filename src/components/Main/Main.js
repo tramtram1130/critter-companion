@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Main.css'
 import Form from '../Form/Form'
 import Results from '../Results/Results'
-import Card from '../Card/Card'
+import Collection from '../Collection/Collection'
 import isabella from '../../assets/images/isabella.gif'
 import { Route } from 'react-router-dom'
 
@@ -61,8 +61,15 @@ function Main() {
           )
         }}
       />
+      <Route exact path="/collection"
+        render={() => {
+          return (
+            <Collection />
+          )
+        }}
+      />
       {!isLoading && <Results bugs={filteredCritters} />}
-      <Route exact path="/:id"
+      {/* <Route exact path="/:id"
           render={({ match }) => {
             console.log('match', match.params)
             const bugToRender = bugs.find((bug) => bug.id == match.params.id)
@@ -71,7 +78,7 @@ function Main() {
               <Card id={bugToRender.id}></Card>
             )
           }}
-        />
+        /> */}
     </main>
   )
 
