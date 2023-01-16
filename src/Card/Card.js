@@ -7,7 +7,7 @@ const Card = ({ name, imgUrl, price, bio, fileName }) => {
     <MicroModal
       trigger={(open) => (
         <div className="card">
-          <img onClick={open} src={imgUrl} />
+          <img onClick={open} src={imgUrl} alt={name} />
         </div>
       )}
     >
