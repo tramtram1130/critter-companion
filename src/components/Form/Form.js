@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
 import ribbon from '../../assets/images/ribbon-end-yellow.svg'
+import PropTypes from 'prop-types'
 
 function Form({ filterCritters }) {
 
@@ -87,3 +88,7 @@ function Form({ filterCritters }) {
 }
 
 export default Form
+
+Form.propTypes = {
+  filterCritters: PropTypes.func.isRequired
+}

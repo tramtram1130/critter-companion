@@ -1,9 +1,10 @@
 import React from 'react'
 import './Results.css'
 import Card from '../Card/Card'
+import PropTypes from 'prop-types'
 
-const Results = (props) => {
-  const allBugs = props.bugs.map(bug => {
+const Results = ({ bugs, addToCollection }) => {
+  const allBugs = bugs.map(bug => {
     return (
       <Card
         key={bug.id}
@@ -13,7 +14,7 @@ const Results = (props) => {
         fileName={bug['file-name']}
         price={bug.price}
         bio={bug['museum-phrase']}
-        addToCollection={props.addToCollection}
+        addToCollection={addToCollection}
       />
     )
   })
@@ -25,3 +26,8 @@ const Results = (props) => {
 }
 
 export default Results
+
+Results.propTypes = {
+  bugs: PropTypes.array.isRequired,
+  addToCollection: PropTypes.func.isRequired,
+}
