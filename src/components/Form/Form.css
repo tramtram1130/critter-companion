@@ -1,12 +1,12 @@
 .form-styling {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .left-ribbon {
   margin-right: -2.3rem;
   margin-top: .8rem;
-  /* z-index: 3; */
 }
 
 .right-ribbon {
@@ -16,14 +16,20 @@
   z-index: -1;
 }
 
-.form {
-  width: 100%;
+.form-container {
+  width: fit-content;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f1e26f;
   z-index: auto;
+}
+
+.selection-container {
+  width: fit-content;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .error-msg-container {
@@ -45,10 +51,11 @@
 }
 
 select, input, button {
-  padding: 5px;
+  width: fit-content;
+  padding: .3rem;
   margin: 10px;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-weight: bolder;
-  border-radius: 5px;
+  border-radius: .5rem;
   border: 1px solid rgb(255, 255, 255);
 }
