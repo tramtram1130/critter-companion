@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import './Form.css'
-import ribbon from '../assets/images/ribbon-end-yellow.svg'
+import ribbon from '../../assets/images/ribbon-end-yellow.svg'
 
 function Form({ filterCritters }) {
 
