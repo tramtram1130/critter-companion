@@ -6,7 +6,7 @@ const BadUrl = () => {
   return (
     <div className="bad-url-container">
       <div className="bad-url-message-container">
-        <h2 className="bad-url-message">...You've detoured quite a bit.</h2>
+        <h2 className="bad-url-msg">...You've detoured quite a bit.</h2>
       </div>
       <Link to="/">
         <button className="return-home-button">Return Home</button>
