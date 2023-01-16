@@ -36,7 +36,7 @@ function Main() {
       if (!selectedMonth || !selectedHour || !selectedHemisphere) {
         return
       }
-      if (bug.availability[selectedHemisphere].includes(selectedMonth) && bug.availability['time-array']) {
+      if (bug.availability[selectedHemisphere].includes(selectedMonth) && bug.availability['time-array'].includes(selectedHour)) {
         return bug
       }
     })
