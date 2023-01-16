@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Form.css'
 import ribbon from '../../assets/images/ribbon-end-yellow.svg'
 
