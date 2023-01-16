@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.css'
+import PropTypes from 'prop-types'
 import MicroModal from 'react-micro-modal'
 
 const Card = ({ id, name, imgUrl, fileName, price, bio, addToCollection }) => {
@@ -36,3 +37,13 @@ const Card = ({ id, name, imgUrl, fileName, price, bio, addToCollection }) => {
 }
 
 export default Card
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  fileName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  bio: PropTypes.string.isRequired,
+  addToCollection: PropTypes.func.isRequired,
+}

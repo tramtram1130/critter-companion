@@ -1,5 +1,6 @@
 import React from 'react'
 import './Collection.css'
+import PropTypes from 'prop-types'
 import Results from '../Results/Results'
 
 const Collection = ({ collection }) => {
@@ -12,3 +13,7 @@ const Collection = ({ collection }) => {
 }
 
 export default Collection
+
+Collection.propTypes = {
+  collections: PropTypes.arrayOf(PropTypes.object)
+}
