@@ -1,5 +1,10 @@
 describe('Home View User Flow', () => {
   beforeEach(() => {
+    cy.intercept('GET', 'https://acnhapi.com/v1a/bugs', {
+      statusCode: 200,
+      ok: true,
+      fixture: 'bugs'
+    })
     cy.visit('http://localhost:3000/')
   }) 
 
