@@ -3,8 +3,9 @@ import './Main.css'
 import Form from '../Form/Form'
 import Results from '../Results/Results'
 import Collection from '../Collection/Collection'
+import BadUrl from '../BadUrl/BadUrl'
 import isabella from '../../assets/images/isabella.gif'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 function Main() {
 
@@ -58,26 +59,29 @@ function Main() {
   return (
     <main className="main">
       <h1 className="app-name">Critter Companion</h1>
-      <Route exact path="/"
-        render={() => {
-          return (
-            <div className="home-container">
-              <Form filterCritters={filterCritters} />
-              <div className="home-gif-container">
-                {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
+      <Switch>
+        <Route exact path="/"
+          render={() => {
+            return (
+              <div className="home-container">
+                <Form filterCritters={filterCritters} />
+                <div className="home-gif-container">
+                  {!filteredCritters.length && <img className="home-gif" alt="Dog Villager dancing" src={isabella} />}
+                </div>
+                {!isLoading && <Results bugs={filteredCritters} addToCollection={addToCollection} />}
               </div>
-              {!isLoading && <Results bugs={filteredCritters} addToCollection={addToCollection} />}
-            </div>
-          )
-        }}
-      />
-      <Route exact path="/collection"
-        render={() => {
-          return (
-            <Collection collection={collection} />
-          )
-        }}
-      />
+            )
+          }}
+        />
+        <Route exact path="/collection"
+          render={() => {
+            return (
+              <Collection collection={collection} />
+            )
+          }}
+        />
+        <Route component={BadUrl} />
+      </Switch>
     </main>
   )
 }
