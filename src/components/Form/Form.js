@@ -3,17 +3,19 @@ import './Form.css'
 import ribbon from '../../assets/images/ribbon-end-yellow.svg'
 import PropTypes from 'prop-types'
 
-function Form({ filterCritters }) {
+function Form({ filterCritters, clearSearch }) {
 
   const [month, setMonth] = useState("")
   const [hour, setHour] = useState("")
   const [hemisphere, setHemisphere] = useState("")
   const [error, setError] = useState(false)
 
-  const clearInputs = () => {
+  const clearInputs = event => {
+    event.preventDefault()
     setMonth("")
     setHour("")
     setHemisphere("")
+    clearSearch()
   }
 
   const handleSubmit = event => {
@@ -90,5 +92,6 @@ function Form({ filterCritters }) {
 export default Form
 
 Form.propTypes = {
-  filterCritters: PropTypes.func.isRequired
+  filterCritters: PropTypes.func.isRequired,
+  clearSearch: PropTypes.func.isRequired,
 }
