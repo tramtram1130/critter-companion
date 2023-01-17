@@ -1,13 +1,14 @@
 import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import logo from '../../assets/images/animal_crossing_logo.svg'
 
 const Header = () => {
   return (
     <nav className="header">
       <Link to='/'>
         <div className="logo-container">
-          <img className="logo" alt="Animal Crossing logo" src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Animal_Crossing_Leaf.svg' />
+          <img className="logo" alt="Animal Crossing logo" src={logo} />
         </div>
       </Link>
       <Link to='/collection'>

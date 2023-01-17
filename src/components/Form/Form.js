@@ -77,8 +77,8 @@ function Form({ filterCritters, clearSearch }) {
               <option value="northern">Northern</option>
               <option value="southern">Southern</option>
             </select>
-            <button onClick={handleSubmit}>Search</button>
-            <button onClick={clearInputs}>Clear</button>
+            <button className="search-button" onClick={handleSubmit}>Search</button>
+            <button className="clear-button" onClick={clearInputs}>Clear</button>
           </form>
         </div>
         <img className="right-ribbon" src={ribbon} alt="ribbon" />
