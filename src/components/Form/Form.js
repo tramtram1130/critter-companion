@@ -83,8 +83,8 @@ function Form({ filterCritters, clearSearch }) {
         </div>
         <img className="right-ribbon" src={ribbon} alt="ribbon" />
       </div>
-      {error && <div className="error-msg-container">
-        <p className="error-msg-text">...Please fill out the form entirely.</p></div>}
+      {error && <div className="form-error-msg-container">
+        <p className="form-error-msg">...Please fill out the form entirely.</p></div>}
     </div>
   )
 }
@@ -92,6 +92,6 @@ function Form({ filterCritters, clearSearch }) {
 export default Form
 
 Form.propTypes = {
-  filterCritters: PropTypes.func.isRequired,
-  clearSearch: PropTypes.func.isRequired,
+  filterCritters: PropTypes.func,
+  clearSearch: PropTypes.func,
 }

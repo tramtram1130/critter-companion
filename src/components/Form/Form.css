@@ -32,7 +32,7 @@
   justify-content: space-evenly;
 }
 
-.error-msg-container {
+.form-error-msg-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@
   background-position: center;
 }
 
-.error-msg-text {
+.form-error-msg {
   font-family: PoppinsSemiBold;
   font-size: 2vh;
 }
@@ -57,4 +57,8 @@ select, input, button {
   font-weight: bolder;
   border-radius: .5rem;
   border: 1px solid rgb(255, 255, 255);
+}
+
+button:hover {
+  background-color: rgb(229, 229, 229);
 }
