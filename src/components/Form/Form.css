@@ -1,3 +1,9 @@
+.form-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-styling {
   display: flex;
   flex-direction: row;
@@ -61,4 +67,45 @@ select, input, button {
 
 button:hover {
   background-color: rgb(229, 229, 229);
+}
+
+@media only screen and (max-width: 600px) {
+  /* For phone: */
+
+  .left-ribbon, .right-ribbon {
+    display: none;
+  }
+
+  .form-container {
+    height: 6rem;
+    width: 100%;
+    border-radius: .2rem;
+    box-shadow: .2rem .3rem .3rem #3d3d3d;
+    margin-bottom: 10px;
+  }
+
+  .selection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+  .form-error-msg-container {
+    width: 70vw;
+  }
+
+  .form-error-msg {
+    width: 50vw;
+    text-align: center;
+  }
+
+  button, select {
+    padding: .15rem;
+    margin: 5px 5px 5px 5px;
+    width: 90%;
+    height: 30px;
+    font-size: .85rem;
+  }
+
+
 }

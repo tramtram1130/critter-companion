@@ -31,3 +31,18 @@
   width: 40%;
   font-size: 2.3vh;
 }
+
+@media only screen and (max-width: 600px) {
+  /* For phone: */
+
+.collection-error-container {
+  width: 70vw;
+}
+
+.collection-error-msg {
+  width: 50vw;
+  text-align: center;
+  font-size: 18px;
+}
+
+}

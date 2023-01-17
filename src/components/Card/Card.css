@@ -43,8 +43,6 @@
   width: 22vh;
 }
 
-
-
 .critter-bio {
   font-family: PoppinsRegular;
 }
@@ -56,4 +54,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For phone: */
+
+  .card {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+  }
+
+  .critter-card-portrait {
+    min-width: 100px;
+  }
+
 }
