@@ -23,8 +23,8 @@ const Card = ({ id, name, imgUrl, fileName, price, bio, addToCollection }) => {
           <img className="critter-portrait" alt={name} src={imgUrl} />
           <p className="critter-bio">{bio}</p>
           <div className="bottom-row">
-            <p>Worth: {price} bells</p>
-            <a href={`https://animalcrossing.fandom.com/wiki/` + fileName} >Additional information</a>
+            <p className="critter-price">Worth: {price} bells</p>
+            <a className="critter-link" href={`https://animalcrossing.fandom.com/wiki/` + fileName} >Additional information</a>
           </div>
           <div>
             <button className="add-button" onClick={handleAddToCollection}>Add to Collection</button>
